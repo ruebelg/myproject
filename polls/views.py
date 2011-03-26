@@ -12,3 +12,7 @@ def results(request, poll_id):
 
 def vote(request, poll_id):
     return HttpResponse("<strong></strong> You're voting on poll %s." % (poll_id,))
+from django.http import HttpResponseRedirect
+
+def redirect_to_polls(request):
+    return HttpResponseRedirect('/polls/')
